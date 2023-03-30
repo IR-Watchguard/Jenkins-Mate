@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jenkins Jobs</title>
+	<style>
+		body {
+			background-color: #f6f6f6;
+			color: #2e2e2e;
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			color: #2e2e2e;
+			font-size: 24px;
+			font-weight: bold;
+			margin: 20px;
+			text-align: center;
+		}
+
+		table {
+			border-collapse: collapse;
+			margin: 0 auto;
+			width: 90%;
+		}
+
+		table th, table td {
+			border: 1px solid #ccc;
+			padding: 10px;
+			text-align: center;
+		}
+
+		table th {
+			background-color: #f2f2f2;
+			color: #2e2e2e;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		table tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		table tr:hover {
+			background-color: #ddd;
+		}
+
+		.success {
+			background-color: #c4e3a5;
+			color: #4f8a10;
+		}
+
+		.failure {
+			background-color: #f8cecc;
+			color: #d8000c;
+		}
+
+		.unstable {
+			background-color: #fdf1ab;
+			color: #9f6000;
+		}
+
+		.aborted {
+			background-color: #d9d9d9;
+			color: #808080;
+		}
+	</style>
+</head>
+<body>
+	<h1>Jenkins Jobs</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Job Name</th>
+				<th>Last Build</th>
+				<th>Last Successful Build</th>
+				<th>Last Stable Build</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="success">
+				<td>Job 1</td>
+				<td>125</td>
+				<td>120</td>
+				<td>120</td>
+			</tr>
+			<tr class="failure">
+				<td>Job 2</td>
+				<td>310</td>
+				<td>309</td>
+				<td>309</td>
+			</tr>
+			<tr class="unstable">
+				<td>Job 3</td>
+				<td>89</td>
+				<td>87</td>
+				<td>87</td>
+			</tr>
+			<tr class="failure">
+				<td>Job 4</td>
+				<td>73</td>
+				<td>73</td>
+				<td>73</td>
+			</tr>
+			<tr class="aborted">
+				<td>Job 5</td>
+				<td>16</td>
+				<td>15</td>
+				<td>15</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

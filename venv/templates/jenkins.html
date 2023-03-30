@@ -68,11 +68,23 @@
 <body>
 	<div>
 		<h1>Jenkins-Mate</h1>
-		<p>Count of Jobs: {{count}}</p>
-		<p> {{headers['X-Jenkins']}}
+		
+		<p> Date : {{headers['Date']}}
+
+		<p> Version : {{headers['X-Jenkins']}}
+		<p> Count of Jobs: {{count}}</p>		 
 		<ul>
-			{% for job in jobs %}
-				<li>{{job['name']}},{{job['color']}},{{jobs['lastBuild'['timestamp']]}}{{jobs['lastBuild'['duration']]}}</li>
+				{% for job in jobs %}
+					<li>job name : {{job['name']}}, job color : {{job['color']}}, job no : {{job['num']}} ,successfulbuild: {{job['lastSuccessfulBuild']}}</li>
+				{% endfor %}
+		</ul>
+
+
+		<p> Version 2 : {{headers2['X-Jenkins']}} 
+		<p> Count of Jobs: {{count2}}</p>
+		<ul>
+			{% for job in jobs2 %}
+				<li>job name : {{job['name']}}, job color : {{job['color']}}, job no : {{job['num']}} ,successfulbuild: {{jobs2['lastSuccessfulBuild']}}</li>
 			{% endfor %}
 		</ul>
 	</div>
